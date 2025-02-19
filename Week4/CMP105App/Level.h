@@ -4,6 +4,10 @@
 #include "Framework/BaseLevel.h"
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Background.h"
+#include "Cursor.h"
 #include <string.h>
 #include <iostream>
 
@@ -16,6 +20,11 @@ public:
 	void handleInput(float dt) override;
 	void update(float dt) override;
 	void render() override;
+
+	Player player;
+	Enemy enemy;
+	Background background;
+	Cursor cursor;
 
 private:
 	// Level objects
